@@ -35,5 +35,9 @@ Command: celery -A djangoproject  worker -l info
 
 Command: celery -A djangoproject beat -l info
 
+<B> Run the Django server </B>
+
+python manage.py runserver
+
 
 
