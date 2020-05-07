@@ -18,6 +18,12 @@ Steps to start this project:
 2. redis-cli ping  # return PONG if working
 
 
+<B>Start Celery  Worker </B>
+
+Command: celery -A djangoproject  worker -l info
+
+
+
 <B> Start Celery flower </B>
 
 Command: celery flower -A djangoproject --address=127.0.0.1 --port=5555
@@ -26,10 +32,6 @@ Open http://127.0.0.1:5555/ in browser to monitor your task and their status.
 
 
 
-
-<B>Start Celery  Worker </B>
-
-Command: celery -A djangoproject  worker -l info
 
 <B> Start Celery Beat </B>
 
