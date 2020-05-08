@@ -1,5 +1,5 @@
 # Django-celery-boilerplate
-This repo contains a simple django and celery setup with celery beat and celery flower configured.
+This repo contains a simple django and celery setup with celery-beat and celery flower configured. 
 
 
 ## Steps to start this project: 
@@ -60,5 +60,10 @@ Open http://127.0.0.1:5555/ in browser to monitor your task and their status.
 ```
 python manage.py runserver
 ```
+
+For now, celery beat runs 2 tasks every minute. just prints on terminal to get to know if setup is working. 
+
+
+This is a very basic setup of django and celery with redis, just to get hands on and understand how things work. Create your own tasks and try out different things on top of this. 
 
 
