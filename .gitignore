@@ -3,4 +3,4 @@ db.sqlite3
 **/__pycache__/**
 **/*.pyc/**
 **/*.pid/**
-djangoproject/__pycache__/
+**/djangoproject/__pycache__/**
