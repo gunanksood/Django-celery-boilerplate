@@ -16,3 +16,40 @@
         - "8000:8000"
       depends_on:
         - db
+        - redis
+    celery:
+      build: .
+      restart: always
+      volumes:
+        - .:/code
+      command: celery -A djangoproject worker -l info
+      depends_on:
+        - db
+        - redis
+    celery-beat:
+      build: .
+      restart: always
+      volumes:
+        - .:/code
+      command: celery -A djangoproject beat -l info
+      depends_on:
+        - db
+        - redis
+
+    flower:
+      build: .
+      container_name: flower_ui
+      restart: always
+      volumes:
+        - .:/code
+      command: celery flower -A djangoproject --port=5555
+      ports:
+        - "13001:5555"
+      depends_on:
+        - db
+        - redis
+    redis:
+      image: redis:alpine
+      hostname: redis_db
+      restart: always
+
