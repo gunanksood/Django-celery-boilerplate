@@ -2,4 +2,4 @@ Django>=2.0,<3.0
 psycopg2-binary
 celery==4.4.2
 redis
-flower==0.9.4
+flower==1.2.0
